@@ -1,6 +1,11 @@
 module.exports = {
-    title: 'my blogs',
-    description: 'YYY',
+    head: [
+        ['link', { rel: 'icon', href: '/img/1.png' }]
+    ],
+    host: '0.0.0.0',
+    port: '8085',
+    title: '我的博客',
+    description: '记录入行以来的问题',
     base: '/',
     themeConfig: {
         nav: [
