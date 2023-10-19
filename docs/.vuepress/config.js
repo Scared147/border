@@ -7,6 +7,13 @@ module.exports = {
     title: '我的博客',
     description: '记录入行以来的问题',
     base: '/',
+    configureWebpack: {
+        node: {
+            global: true,
+            process: true,
+            Buffer: true
+        }
+    },
     themeConfig: {
         nav: [
             { text: "首页", link: "/" },
@@ -32,6 +39,7 @@ module.exports = {
                 children: [
                     { title: "问题", path: "/pages/test/1" },
                     { title: "帮助", path: "/pages/test/2" },
+                    { title: "测试", path: "/test/1" },
                 ]
             }
         ]
