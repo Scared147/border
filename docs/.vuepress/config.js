@@ -44,6 +44,17 @@ module.exports = {
             }
         ]
     },
+    devServer: {    // 添加这个devServer配置
+        proxy: {
+            '/api': {
+                target: 'https://www.baidu.com/',     // 这里填写具体的真实服务器接口地止
+                changeOrigin: true,            // 允许跨域
+                pathRewrite: {
+                    '^/api': ''
+                }
+            },
+        }
+    },
 
 
 }

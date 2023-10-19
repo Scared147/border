@@ -10,6 +10,21 @@
 
 <script>
 export default {
-  name: 'MyTest'
+  name: 'MyTest',
+  data () {
+    return {
+      value: new Date()
+    }
+  },
+  created () {
+    this.getMapInFo()//页面打开先执行一次的方法
+  },
+  //方法
+  methods: {
+    async getMapInFo () {
+      const response = await this.$axios.get('/api',{});
+      console.log(response)
+    }
+  }
 }
 </script>
